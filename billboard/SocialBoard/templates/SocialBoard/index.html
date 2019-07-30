@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'SocialBoard/css/styles.css' %}">
     <script src="{% static 'SocialBoard/js/social.js' %}"></script>
-    <title>Social Board</title>
+    <title>Billboard</title>
 </head>
 <body>
     <h1>Posts</h1>
+    <div class="user-welcome">Welcome {{user}}</div>
     <table>
         <tr>
             <th class="post-data">Title</th>
@@ -27,7 +28,6 @@
             </tr>
         {% endfor %}
     </table>
-    
-
+    <a href="{% url 'socialboard:logout' %}">Logout</a> 
 </body>
 </html>
