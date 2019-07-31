@@ -15,7 +15,7 @@ def register(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             new_user = form.save()
-            login(request, new_user)
+            login(request, new_user, backend='django.contrib.auth.backends.ModelBackend')
             return HttpResponseRedirect(reverse("socialboard:index"))
     else:
         form = UserCreationForm()

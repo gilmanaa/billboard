@@ -1,0 +1,52 @@
+body {
+    margin: 0px;
+}
+.login-bg {
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    font-family: 'Roboto Slab', serif;
+    -webkit-box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.75);
+}
+.login-heading {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.login-submit {
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px 40px;
+    margin: 10px 0px;
+    width: 100%;
+}
+#id_username {
+    background-color: lightblue;
+    border: 0px;
+    padding: 5px;
+}
+#id_password {
+    background-color: lightblue;
+    border: 0px;
+    padding: 5px;
+}
+td {
+    display: block;
+}
+.login-image {
+    height: 30px;
+    width: 30px;
+}
