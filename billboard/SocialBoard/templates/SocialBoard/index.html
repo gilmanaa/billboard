@@ -1,35 +1,44 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'SocialBoard/css/styles.css' %}">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    {% csrf_token %}
     <script src="{% static 'SocialBoard/js/social.js' %}"></script>
+    <script type="text/javascript"> var csrf = "{{csrf_token}}"; var author = "{{user}}";</script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
     <title>Billboard</title>
 </head>
+
 <body>
-    <h1>Posts</h1>
-    <div class="user-welcome">Welcome {{user}}</div>
-    <table>
-        <tr>
-            <th class="post-data">Title</th>
-            <th class="post-data">Publish Date</th>
-            <th class="post-data">Content</th>
-            <th class="post-data">Author</th>
-        </tr>
+    <div class="soc-head-wrapper">
+        <h1 class="soc-head">Social Board</h1>
+    </div>
+    <main class="main">
+        <div class="user-welcome">Welcome {{user}}</div>
         {% for p in posts %}
-            <tr>
-                <td class="post-data">{{p.title}}</td>
-                <td class="post-data">{{p.publish_date}}</td>
-                <td class="post-data">{{p.content}}</td>
-                <td class="post-data">{{p.author}}</td>
-            </tr>
+        <div class="post-container">
+            <span class="post-date">{{p.publish_date}}</span>
+            <div class="post-title">{{p.title}}</div>
+            <div class="post-cont">{{p.content}}</div>
+            <span class="post-author">-{{p.author}}</span>
+        </div>
+        {% empty %}
+        <div class="no-posts">No posts on the social board, add a new post below!</div>
         {% endfor %}
-    </table>
-    <div id="new-post">New Post</div>
-    <a href="{% url 'socialboard:logout' %}">Logout</a> 
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        <div class="new-post-wrapper">
+            <button id="new-post-btn">New Post</button>
+            <div id="new-post-input-wrapper" class="hide"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <a href="{% url 'socialboard:logout' %}">Logout</a>
+    </footer>
 </body>
+
 </html>

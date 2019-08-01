@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
+from django.shortcuts import redirect
+
+def social_board_redirect(self):
+    return redirect('/socialbd/')
 
 urlpatterns = [
+    url(r'^$',social_board_redirect),
     url(r'^socialbd/',include('SocialBoard.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^auth/',include('social_django.urls',namespace='social')),
 ]
+

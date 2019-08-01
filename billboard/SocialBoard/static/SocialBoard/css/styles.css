@@ -1,10 +1,131 @@
 body {
     margin: 0px;
+    background-color: aliceblue;
+    font-family: 'Roboto Slab', serif;
+}
+.soc-head-wrapper {
+    background-color: dodgerblue;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+.soc-head {
+    color: white;
+    display: block;
 }
 .user-welcome {
     font-size: large;
-    text-decoration: underline;
+    margin: 10px;
+    color: dodgerblue;
 }
-.post-data {
-    border: 1px solid black;
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 85px;
+}
+.no-posts {
+    font-size: xx-large;
+    color: dodgerblue;
+    margin: 20px;
+}
+.post-container {
+    border: 2px dashed dodgerblue;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    width: 90vw;
+}
+.post-date {
+    position: absolute;
+    top: -11px;
+    left: 10px;
+    background-color: aliceblue;
+}
+.post-title {
+    font-size: xx-large;
+    color: dodgerblue;
+    
+}
+.post-cont {
+    margin-bottom: 20px;
+}
+.post-author {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+.footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: dodgerblue;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.footer a {
+    color: white;
+    margin: 10px;
+}
+.new-post-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#new-post-btn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 20px;
+    border: 0px;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+    opacity: 0.6;
+}
+#new-post-btn:hover {
+    opacity: 1;
+}
+.hide {
+    display: none;
+}
+#new-post-input-wrapper {
+    border: 2px dashed dodgerblue;
+    margin: 10px;
+    padding: 10px;
+}
+.new-post-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#new-post-title {
+    border: 1px solid dodgerblue;
+    padding: 5px;
+    width: 30vw;
+}
+#new-post-content {
+    border: 1px solid dodgerblue;
+    padding: 5px;
+    width: 70vw;
+}
+#submit-new-post {
+    background-color: dodgerblue;
+    color: white;
+    padding: 5px 20px;
+    border: 0px;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+    display: block;
+    margin: 5px;
+    opacity: 0.6;
+}
+#submit-new-post:hover {
+    opacity: 1;
 }
