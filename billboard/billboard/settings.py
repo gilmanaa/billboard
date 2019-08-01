@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import secret
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -113,10 +114,10 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '626684605950-1o1h7qsevfh6782oqqupvs3d19al9nh9.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'GM2wpyAiOB7Qivn0CBuB5vCA'
-SOCIAL_AUTH_GITHUB_KEY = 'd57ffdff2f3ab8d94351'
-SOCIAL_AUTH_GITHUB_SECRET = 'e76623aefbdb8668e639fce138c069e6d553ea94'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = secret.SOCIAL_AUTH_GOOGLE_OAUTH2_KEY
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = secret.SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
+SOCIAL_AUTH_GITHUB_KEY = secret.SOCIAL_AUTH_GITHUB_KEY
+SOCIAL_AUTH_GITHUB_SECRET = secret.SOCIAL_AUTH_GITHUB_SECRET
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
