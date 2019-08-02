@@ -1,1 +1,1 @@
-web: python ./billboard/manage.py runserver $PORT
+web: gunicorn billboard.wsgi --log-file -
