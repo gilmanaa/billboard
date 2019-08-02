@@ -1,1 +1,1 @@
-web: gunicorn billboard.wsgi --log-file -
+web: gunicorn billboard.wsgi
