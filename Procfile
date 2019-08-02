@@ -1,1 +1,1 @@
-web: python ./billboard/manage.py $PORT
+web: python ./billboard/manage.py runserver $PORT
