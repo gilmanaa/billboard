@@ -29,6 +29,7 @@ function addNewPost() {
         contentTitle.appendTo(postInputs)
         content.appendTo(postInputs)
         submit.appendTo(postInputs)
+        window.scrollBy(0, 200);
         newPost.attr("disabled", true)
     })
 }
