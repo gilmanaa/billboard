@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'koa9=^&xnl1hc877gu%hn=)w@6_50^o%650bcd270x^h)xx**%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['billboard19itc.herokuapp.com', '127.0.0.1']
 
