@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT billboard.billboard.wsgi:application
+web: gunicorn billboard.wsgi --log-file -
