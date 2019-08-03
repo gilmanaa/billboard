@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath billboard wsgi
+web: gunicorn billboard.wsgi --log-file -
