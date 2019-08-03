@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT billboard.wsgi:application
+web: waitress-serve --port=$PORT billboard.billboard.wsgi:application
